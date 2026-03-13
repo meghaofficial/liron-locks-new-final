@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { RiSearch2Line, RiHeart3Line, RiShoppingCartLine, RiUser3Line } from "react-icons/ri";
