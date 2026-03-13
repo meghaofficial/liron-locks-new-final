@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import ProductSlider from './ProductSlider';
 import Navbar from './Navbar';
@@ -12,7 +12,7 @@ const HomePage = () => {
     openUpperBar: true,
   });
 
-  const handleUpdateBool = (key, value) => setBoolValues(prev => ({ ...prev, [key]: value }));
+  const handleUpdateBool = (key: string, value: boolean) => setBoolValues(prev => ({ ...prev, [key]: value }));
 
   return (
     <div className='google-sans'>

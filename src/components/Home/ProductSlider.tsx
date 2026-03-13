@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 import ProductCard from "../ProductCard";
 
