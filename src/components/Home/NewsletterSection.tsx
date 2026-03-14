@@ -50,7 +50,7 @@ export default function NewsletterSection() {
 
           <div className="relative w-full sm:w-95">
             <FiMail
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-green-800"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-brand"
               size={20}
             />
 
