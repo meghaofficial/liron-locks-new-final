@@ -5,7 +5,7 @@ export default function FlashSale() {
 
   return (
     <>
-      <div className="w-full p-6 flex flex-col md:flex-row items-center justify-between md:mt-12 mt-8 md:gap-14 gap-10">
+      <div className="w-full p-6 flex flex-col md:flex-row items-center justify-between md:my-7 my-5 md:gap-14 gap-10">
 
         {/* LEFT CONTENT */}
         <div className="space-y-4 bg-gray-100 w-full h-100 rounded-3xl p-6 flex flex-col items-center justify-center">

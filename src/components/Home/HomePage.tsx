@@ -7,6 +7,11 @@ import { PiPackageLight, PiWalletLight, PiHeadphonesLight } from "react-icons/pi
 import OurProducts from './OurProducts';
 import FlashSale from './FlashSale';
 import Testimonials from './Testimonials';
+import NewsBlogs from './NewsBlogs';
+import InstagramSection from './InstagramSection';
+import FAQSection from './FAQSection';
+import NewsletterSection from './NewsletterSection';
+import Footer from '../shared/Footer';
 
 const HomePage = () => {
 
@@ -200,6 +205,11 @@ const HomePage = () => {
       <OurProducts />
       <FlashSale />
       <Testimonials />
+      <NewsBlogs />
+      <InstagramSection />
+      <FAQSection />
+      <NewsletterSection />
+      <Footer />
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { RiSearch2Line, RiHeart3Line, RiShoppingCartLine, RiUser3Line } from "react-icons/ri";
 import lion from '../../assets/images/lion.png';
+import Logo from '../shared/Logo';
 
 const Navbar = () => {
 
@@ -39,10 +40,7 @@ const Navbar = () => {
             <button onClick={() => setOpenNav(true)}>
               <HiBars3 size={24} />
             </button>
-            <div className='flex items-center gap-2' onClick={() => navigate("/")}>
-              <img src={lion} alt="lion" className='h-6' />
-              <span className='font-bold text-[15px] text-brand roboto'>Liron Locks</span>
-            </div>
+            <Logo />
 
           </div>
           <div className="flex items-center gap-4">

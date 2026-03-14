@@ -247,7 +247,7 @@ const OurProducts = () => {
       const arr: string[] = Object.keys(data);
       setUpperList(arr);
     }
-  }, [data]);
+  }, []);
 
   return (
     <>

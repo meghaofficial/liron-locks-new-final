@@ -82,7 +82,7 @@ export default function Testimonials() {
   }, [slides.length]);
 
   return (
-    <section className="bg-gray-100 py-10 overflow-hidden">
+    <section className="bg-gray-100 md:py-20 py-10 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Label */}
