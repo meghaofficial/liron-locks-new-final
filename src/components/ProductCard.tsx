@@ -14,6 +14,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price=0,
 }) => {
 
+  console.log("pr", price);
+
   return (
     <div className="md:w-[320px] w-55 bg-gray-100 md:rounded-3xl rounded-xl p-4 shadow-md relative">
 

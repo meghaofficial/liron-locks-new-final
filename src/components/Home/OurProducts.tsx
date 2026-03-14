@@ -13,7 +13,7 @@ interface Product {
 
 const OurProducts = () => {
 
-  const [data, setData] = useState<Record<string, Product[]>>({
+  const data: Record<string, Product[]> = {
     ['All Products']: [
       {
         name: "Dead Lock",
@@ -238,7 +238,7 @@ const OurProducts = () => {
         url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
       },
     ]
-  });
+  };
   const [upperList, setUpperList] = useState<string[]>([]);
   const [activeTab, setActiveTab] = useState<string>('All Products');
 
