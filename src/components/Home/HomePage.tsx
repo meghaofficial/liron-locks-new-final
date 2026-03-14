@@ -5,6 +5,8 @@ import Navbar from './Navbar';
 import { RxCross1 } from "react-icons/rx";
 import { PiPackageLight, PiWalletLight, PiHeadphonesLight } from "react-icons/pi";
 import OurProducts from './OurProducts';
+import FlashSale from './FlashSale';
+import Testimonials from './Testimonials';
 
 const HomePage = () => {
 
@@ -196,6 +198,8 @@ const HomePage = () => {
       </div>
 
       <OurProducts />
+      <FlashSale />
+      <Testimonials />
     </div>
   )
 }

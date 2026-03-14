@@ -1,12 +1,13 @@
 body{
   background-color: #ebebeb;
+  /* overflow-x: hidden !important; */
 }
 
-.scrollbarHide {
+.hide-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
 
-.scrollbarHide::-webkit-scrollbar {
+.hide-scrollbar::-webkit-scrollbar {
   display: none;             /* Chrome, Safari */
 }

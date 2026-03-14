@@ -36,7 +36,7 @@ const ProductSlider = () => {
     <div className="flex flex-col md:w-1/2 w-full gap-3">
       <div
         ref={scrollRef}
-        className="flex relative overflow-x-auto gap-5 p-3 scrollbarHide scroll-smooth"
+        className="flex relative overflow-x-auto gap-5 p-3 hide-scrollbar scroll-smooth"
       >
         {highlightedProducts.map((item, index) => (
           <div key={index} className="shrink-0">
