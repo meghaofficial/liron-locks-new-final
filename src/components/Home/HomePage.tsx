@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import ProductSlider from './ProductSlider';
-import Navbar from './Navbar';
+import Navbar from '../shared/Navbar';
 import { RxCross1 } from "react-icons/rx";
 import { PiPackageLight, PiWalletLight, PiHeadphonesLight } from "react-icons/pi";
 import OurProducts from './OurProducts';
