@@ -3,13 +3,13 @@ import { FiMaximize } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
 type ProductCardType = {
-  name: string,
-  category: string,
-  price: number,
+  name?: string,
+  category?: string,
+  price?: number,
   discount?: number,
   discounted_price?: number,
-  rating: number,
-  url: string
+  rating?: number,
+  url?: string
 }
 
 export default function ProductCard2({ name, category, price, discount, discounted_price, rating, url }: ProductCardType) {

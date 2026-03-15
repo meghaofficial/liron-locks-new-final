@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { RiSearch2Line, RiHeart3Line, RiShoppingCartLine, RiUser3Line } from "react-icons/ri";
@@ -8,6 +8,19 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   const [openNav, setOpenNav] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === '/' || path === ''){
+      setActiveTab('Home');
+      return;
+    }
+    if (path === '/shop'){
+      setActiveTab('Shop');
+      return;
+    }
+  }, [location.pathname]);
 
   return (
     <>
@@ -18,8 +31,8 @@ const Navbar = () => {
           <span className='font-bold text-[20px] text-brand roboto'>Liron Locks</span>
         </div>
         <div className='text-[12px] flex items-center gap-5 font-medium roboto'>
-          <Link to="/">Home</Link>
-          <Link to="/">Shop</Link>
+          <Link to="/" className={`${activeTab === 'Home' && 'font-semibold'}`}>Home</Link>
+          <Link to="/shop" className={`${activeTab === 'Shop' && 'font-semibold'}`}>Shop</Link>
           <Link to="/">Categories</Link>
           <Link to="/">About Us</Link>
           <Link to="/">Contact Us</Link>
@@ -69,7 +82,7 @@ const Navbar = () => {
       ></div>
       {/* SIDEBAR */}
       <div
-        className={`fixed top-0 left-0 h-full w-[260px] z-9999 bg-white shadow-lg transform transition-transform duration-300 ${openNav ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 h-full w-65 z-9999 bg-white shadow-lg transform transition-transform duration-300 ${openNav ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         <div className="p-6 space-y-6">
@@ -78,8 +91,8 @@ const Navbar = () => {
             <span className='font-bold text-[16px] text-brand roboto'>Liron Locks</span>
           </div>
           <nav className='text-[14px] flex flex-col gap-4 font-medium roboto'>
-            <Link to="/">Home</Link>
-            <Link to="/">Shop</Link>
+            <Link to="/" className={`${activeTab === 'Home' && 'font-semibold'}`}>Home</Link>
+            <Link to="/shop" className={`${activeTab === 'Shop' && 'font-semibold'}`}>Shop</Link>
             <Link to="/">Categories</Link>
             <Link to="/">About Us</Link>
             <Link to="/">Contact Us</Link>
