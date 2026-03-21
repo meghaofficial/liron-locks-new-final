@@ -16,7 +16,7 @@ const Navbar = () => {
       setActiveTab('Home');
       return;
     }
-    if (path === '/shop'){
+    if (path === '/products'){
       setActiveTab('Shop');
       return;
     }
@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
         <div className='text-[12px] flex items-center gap-5 font-medium roboto'>
           <Link to="/" className={`${activeTab === 'Home' && 'font-semibold'}`}>Home</Link>
-          <Link to="/shop" className={`${activeTab === 'Shop' && 'font-semibold'}`}>Shop</Link>
+          <Link to="/products" className={`${activeTab === 'Shop' && 'font-semibold'}`}>Shop</Link>
           <Link to="/">Categories</Link>
           <Link to="/">About Us</Link>
           <Link to="/">Contact Us</Link>
@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
           <nav className='text-[14px] flex flex-col gap-4 font-medium roboto'>
             <Link to="/" className={`${activeTab === 'Home' && 'font-semibold'}`}>Home</Link>
-            <Link to="/shop" className={`${activeTab === 'Shop' && 'font-semibold'}`}>Shop</Link>
+            <Link to="/products" className={`${activeTab === 'Shop' && 'font-semibold'}`}>Shop</Link>
             <Link to="/">Categories</Link>
             <Link to="/">About Us</Link>
             <Link to="/">Contact Us</Link>

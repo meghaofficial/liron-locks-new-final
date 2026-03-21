@@ -8,6 +8,7 @@ import FAQSection from './FAQSection';
 import NewsletterSection from './NewsletterSection';
 import Layout from '../Layout';
 import FreeShipping from '../shared/FreeShipping';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
 
@@ -16,34 +17,34 @@ const HomePage = () => {
       <Layout>
         {/* hero section */}
         <div className='flex md:flex-row flex-col items-center relative py-6'>
-          <div className="md:w-1/2 p-8 space-y-8">
+          <div className="md:w-1/2 p-8 space-y-6">
             <div className="flex items-center gap-3 bg-gray-100 rounded-full px-5 py-2 w-fit">
               <span className="text-xl">🔑</span>
               <span className="text-gray-700 font-medium">
-                The Best Online Locks Store
+                Built for Security, Made for You
               </span>
             </div>
             <h1 className="text-5xl font-semibold leading-tight text-gray-900">
-              Explore Our{" "}
+              Upgrade Your{" "}
               <span className="text-brand">
-                Modern Locks Collection
+                Safety with Better Locks
               </span>
             </h1>
             <p className="text-gray-600 text-md max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore.
+              Secure what matters with premium locks built for strength and trust.
+              Reliable protection and durability you can count on every day.
             </p>
             <div className="flex md:flex-row flex-col items-center gap-6">
               <button className="flex items-center gap-2 bg-brand text-white px-6 py-3 rounded-full font-medium shadow-md">
                 Shop Now
                 <span>→</span>
               </button>
-              <a
-                href="#"
+              <Link
+                to="/products"
                 className="underline underline-offset-4 text-gray-800 font-medium"
               >
                 View All Products
-              </a>
+              </Link>
             </div>
 
           </div>
@@ -65,14 +66,10 @@ const HomePage = () => {
                     Handles
                   </h2>
                   <ul className="text-gray-700 text-sm space-y-2">
-                    <li>Gaming Chair</li>
-                    <li>Lounge Chair</li>
-                    <li>Folding Chair</li>
-                    <li>Dining Chair</li>
-                    <li>Office Chair</li>
-                    <li>Armchair</li>
-                    <li>Bar Stool</li>
-                    <li>Club Chair</li>
+                    <li>Iron Handles</li>
+                    <li>Rose Handles</li>
+                    <li>SS Handles</li>
+                    <li>Zinc Handle SS Plate</li>
                   </ul>
                 </div>
               </div>
@@ -88,17 +85,17 @@ const HomePage = () => {
               <div className="bg-gray-100 rounded-3xl p-8 flex justify-between items-center relative overflow-hidden">
                 <div className="space-y-4">
                   <p className="bg-white px-4 py-1 rounded-full text-yellow-500 mb-3 w-fit">
-                    10+ Items
+                    3+ Items
                   </p>
                   <h2 className="text-3xl font-bold text-gray-800">
                     Mortice Lock
                   </h2>
-                  <ul className="text-gray-700 text-sm space-y-1">
+                  {/* <ul className="text-gray-700 text-sm space-y-1">
                     <li>Reception Sofa</li>
                     <li>Sectional Sofa</li>
                     <li>Armless Sofa</li>
                     <li>Curved Sofa</li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <img
                   src="https://res.cloudinary.com/dlmdsldqn/image/upload/v1772554685/Picsart_26-03-03_11-36-01-738_jr5g7e.png"
@@ -109,16 +106,14 @@ const HomePage = () => {
               <div className="bg-gray-100 rounded-3xl p-8 flex justify-between items-center relative overflow-hidden">
                 <div className="space-y-4">
                   <p className="bg-white px-4 py-1 rounded-full text-yellow-500 w-fit mb-3">
-                    10+ Items
+                    4+ Items
                   </p>
                   <h2 className="text-3xl font-bold text-gray-800">
                     Deadlock
                   </h2>
                   <ul className="text-gray-700 text-sm space-y-1">
-                    <li>Table Lights</li>
-                    <li>Floor Lights</li>
-                    <li>Ceiling Lights</li>
-                    <li>Wall Lights</li>
+                    <li>Drawer Locks</li>
+                    <li>Door Locks</li>
                   </ul>
                 </div>
                 <img

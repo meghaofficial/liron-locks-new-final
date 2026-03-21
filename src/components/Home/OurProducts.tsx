@@ -1,250 +1,18 @@
 import { useEffect, useState } from "react"
 import ProductCard2 from "../cards/ProductCard2";
-
-interface Product {
-  name: string;
-  category: string;
-  price: number;
-  discount: number;
-  discounted_price: number;
-  rating: number;
-  url: string;
-}
+import { allFewProducts } from "../../data/categories";
+import { FiExternalLink } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const OurProducts = () => {
 
-  const data: Record<string, Product[]> = {
-    ['All Products']: [
-      {
-        name: "Dead Lock",
-        category: "Dead Lock",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png"
-      },
-      {
-        name: "Dead Lock",
-        category: "Dead Lock",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png"
-      },
-      {
-        name: "Dead Lock",
-        category: "Dead Lock",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png"
-      },
-      {
-        name: "Dead Lock",
-        category: "Dead Lock",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png"
-      },
-      {
-        name: "Dead Lock",
-        category: "Dead Lock",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png"
-      },
-      {
-        name: "Dead Lock",
-        category: "Dead Lock",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png"
-      },
-    ],
-    ['Latest Products']: [
-      {
-        name: "Handle",
-        category: "Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png"
-      },
-      {
-        name: "Handle",
-        category: "Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png"
-      },
-      {
-        name: "Handle",
-        category: "Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png"
-      },
-      {
-        name: "Handle",
-        category: "Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png"
-      },
-      {
-        name: "Handle",
-        category: "Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png"
-      },
-      {
-        name: "Handle",
-        category: "Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png"
-      },
-    ],
-    ['Best Sellers']: [
-      {
-        name: "Rose Handle",
-        category: "Rose Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png"
-      },
-      {
-        name: "Rose Handle",
-        category: "Rose Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png"
-      },
-      {
-        name: "Rose Handle",
-        category: "Rose Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png"
-      },
-      {
-        name: "Rose Handle",
-        category: "Rose Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png"
-      },
-      {
-        name: "Rose Handle",
-        category: "Rose Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png"
-      },
-      {
-        name: "Rose Handle",
-        category: "Rose Handle",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png"
-      },
-    ],
-    ['Featured Products']: [
-      {
-        name: "SS Zinc Plated",
-        category: "SS Zinc Plated",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
-      },
-      {
-        name: "SS Zinc Plated",
-        category: "SS Zinc Plated",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
-      },
-      {
-        name: "SS Zinc Plated",
-        category: "SS Zinc Plated",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
-      },
-      {
-        name: "SS Zinc Plated",
-        category: "SS Zinc Plated",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
-      },
-      {
-        name: "SS Zinc Plated",
-        category: "SS Zinc Plated",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
-      },
-      {
-        name: "SS Zinc Plated",
-        category: "SS Zinc Plated",
-        price: 5000,
-        discount: 10,
-        discounted_price: 4500,
-        rating: 4.5,
-        url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262814/Picsart_26-02-27_23-39-34-264_fwiwbz.png"
-      },
-    ]
-  };
   const [upperList, setUpperList] = useState<string[]>([]);
-  const [activeTab, setActiveTab] = useState<string>('All Products');
+  const [activeTab, setActiveTab] = useState<string>('Iron Handles');
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (data) {
-      const arr: string[] = Object.keys(data);
+    if (allFewProducts) {
+      const arr: string[] = Object.keys(allFewProducts);
       setUpperList(arr);
     }
   }, []);
@@ -271,10 +39,15 @@ const OurProducts = () => {
               {item}
             </button>
           ))}
+          <button className={`px-6 py-3 cursor-pointer transition flex items-center gap-2 underline`} 
+          onClick={() => navigate('/products')}
+          >
+            More <FiExternalLink />
+          </button>
         </div>
 
         <div className="flex items-center gap-2 w-full overflow-x-auto md:relative -right-4 hide-scrollbar">
-          {data?.[activeTab]?.map((item, index) => (
+          {allFewProducts?.[activeTab]?.map((item, index) => (
             <div key={index}>
               <ProductCard2
                 name={item?.name}

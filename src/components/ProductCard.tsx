@@ -1,35 +1,31 @@
 import { HiArrowUpRight } from "react-icons/hi2";
 
 type ProductCardProps = {
-  image: string;
-  title: string;
-  items: number;
-  price: number;
+  image?: string;
+  title?: string;
+  items?: number;
 };
 
 const ProductCard: React.FC<ProductCardProps> = ({
   image,
   title,
   items,
-  price=0,
 }) => {
 
-  console.log("pr", price);
-
   return (
-    <div className="md:w-[320px] w-55 bg-gray-100 md:rounded-3xl rounded-xl p-4 shadow-md relative">
+    <div className="md:w-[320px] w-55 bg-gray-100 md:rounded-3xl rounded-xl p-2 shadow-md relative">
 
       {/* Image Section */}
       <div className="relative md:rounded-2xl rounded-xl md:h-55 h-35 overflow-hidden flex items-center justify-center w-full bg-gray-200">
         <img
           src={image}
           alt={title}
-          className=" object-cover bg-gray-200"
+          className="md:h-50 h-30 object-cover bg-gray-200"
         />
       </div>
 
       {/* Bottom Content */}
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex justify-between items-center mt-4 p-2">
 
         <div>
           <h3 className="md:text-lg text-md google-sans font-semibold text-gray-800">
@@ -37,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </h3>
 
           <p className="text-gray-600 text-sm google-sans">
-            {items.toLocaleString()} Items
+            {items?.toLocaleString()} Items
           </p>
         </div>
 

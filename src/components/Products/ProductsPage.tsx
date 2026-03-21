@@ -1,13 +1,14 @@
 import ProductCard2 from "../cards/ProductCard2"
 import Layout from "../Layout"
 import FreeShipping from "../shared/FreeShipping"
-import ShopHeader from "./ShopHeader"
+import ProductsHeader from "./ProductsHeader"
 
-const ShopPage = () => {
+const ProductsPage = () => {
+
   return (
     <>
       <Layout>
-        <ShopHeader />
+        <ProductsHeader />
 
 
         <section className="py-10 bg-white">
@@ -154,4 +155,4 @@ const ShopPage = () => {
   )
 }
 
-export default ShopPage
+export default ProductsPage

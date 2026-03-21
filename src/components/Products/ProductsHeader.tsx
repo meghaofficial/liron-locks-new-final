@@ -1,4 +1,4 @@
-export default function ShopHeader() {
+export default function ProductsHeader() {
   return (
     <section className="relative bg-gray-100 py-14 overflow-hidden">
 

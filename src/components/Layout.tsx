@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className='google-sans'>
-      {openUpperBar && (
+      {/* {openUpperBar && (
         <div className='bg-brand flex items-center justify-between text-white text-[12px] p-3 sm:px-12'>
           <p className='sm:block hidden'>Call Us: +91-9358252692</p>
           <p>Sign up and <span className='font-semibold'>GET 25% OFF</span> for your first order. <span className='underline text-yellow-500 underline-offset-3'>Sign up now</span></p>
@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
             <FaTwitter className='text-yellow-500 cursor-pointer' size={15} />
           </div>
         </div>
-      )}
+      )} */}
       <Navbar />
       {children}
       <Footer />

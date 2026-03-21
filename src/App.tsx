@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/Home/HomePage';
-import ShopPage from './components/Shop/ShopPage';
+import ShopPage from './components/products/productsPage';
 
 function App() {
   return (
     <>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/shop' element={<ShopPage />} />
+        <Route path='/products' element={<ShopPage />} />
       </Routes>
     </>
   )

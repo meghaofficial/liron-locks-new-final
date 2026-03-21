@@ -1,4 +1,4 @@
-import { PiHeadphonesLight, PiPackageLight, PiWalletLight } from "react-icons/pi"
+import { PiHeadphonesLight, PiPackageLight, PiHandshakeLight } from "react-icons/pi"
 
 const FreeShipping = () => {
   return (
@@ -12,10 +12,10 @@ const FreeShipping = () => {
           </div>
           <div>
             <h3 className="md:text-[20px] font-semibold text-gray-800">
-              Free Shipping
+              Bulk Orders Available
             </h3>
             <p className="text-gray-500 md:text-[15px] text-[13px]">
-              Free shipping for order above Rs. 2500
+              Contact us for dealer and wholesale inquiries
             </p>
           </div>
         </div>
@@ -23,14 +23,14 @@ const FreeShipping = () => {
         <div className="flex items-center gap-4">
           <div className="relative w-13 h-13 flex items-center justify-center">
             <div className="absolute -bottom-1 -right-1 md:w-11.25 md:h-11.25 h-10 w-10 bg-yellow-500 rounded-full"></div>
-            <PiWalletLight className="text-brand md:text-[100px] text-[40px] relative z-10" />
+            <PiHandshakeLight className="text-brand md:text-[100px] text-[40px] relative z-10" />
           </div>
           <div>
             <h3 className="md:text-[20px] font-semibold text-gray-800">
-              Flexible Payment
+              Partner With Us
             </h3>
             <p className="text-gray-500 md:text-[15px] text-[13px]">
-              Multiple secure payment options
+              Simple onboarding for dealers and distributors
             </p>
           </div>
         </div>
@@ -42,10 +42,10 @@ const FreeShipping = () => {
           </div>
           <div>
             <h3 className="md:text-[20px] font-semibold text-gray-800">
-              24×7 Support
+              Dedicated Support
             </h3>
             <p className="text-gray-500 md:text-[15px] text-[13px]">
-              We support online all days.
+              We're here to assist you with any queries
             </p>
           </div>
         </div>
