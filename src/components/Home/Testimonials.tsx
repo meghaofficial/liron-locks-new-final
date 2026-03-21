@@ -5,46 +5,46 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Leslie Alexander",
-    role: "Architecture",
+    name: "Chandra Prakash Sharma",
+    role: "Chief Executive Officer",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     review:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "As CEO, I am committed to building a brand that stands for trust, durability, and innovation in every product we offer. Our vision is to continuously grow while delivering reliable solutions that meet the evolving needs of our customers.",
   },
   {
-    name: "Jenny Wilson",
-    role: "Interior Designer",
+    name: "Yash Wardhan",
+    role: "Managing Director",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     review:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "Our goal is to provide dependable security solutions backed by quality and experience. We are dedicated to growing our business while upholding trust and integrity in every product.",
   },
   {
-    name: "Robert Fox",
-    role: "Builder",
+    name: "Devendri Sharma",
+    role: "Accountant",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     review:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "As an Accountant, I ensure that all financial operations are managed with accuracy, transparency, and compliance. My focus is on maintaining strong financial discipline to support the company’s steady growth.",
   },
   {
-    name: "Esther Howard",
-    role: "Engineer",
+    name: "Varsha Sharma",
+    role: "Business Partner",
     image: "https://randomuser.me/api/portraits/women/12.jpg",
     review:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "As a Business Partner, I am committed to strengthening relationships and driving sustainable growth for the company. My focus is on building trust, expanding opportunities, and ensuring long-term success.",
   },
   {
-    name: "Leslie Alexander",
-    role: "Architecture",
+    name: "Megha Sharma",
+    role: "Digital Operations Manager",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     review:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "As Digital Operations Manager, I focus on enhancing our online presence and ensuring a seamless digital experience. My goal is to drive growth through efficient systems, user-focused design, and continuous improvement.",
   },
   {
-    name: "Jenny Wilson",
-    role: "Interior Designer",
+    name: "Khushi Sharma",
+    role: "Business Supporter",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     review:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "As a Business Supporter, I contribute to the smooth functioning of operations and day-to-day activities. My focus is on providing reliable support to ensure the business runs efficiently and effectively.",
   },
 ];
 
@@ -87,17 +87,17 @@ export default function Testimonials() {
 
         {/* Label */}
         <div className="flex justify-center items-center gap-2 mb-3">
-          <span className="w-6 h-[2px] bg-yellow-500"></span>
-          <p className="text-gray-500 text-sm font-medium">Testimonial</p>
+          <span className="w-6 h-0.5 bg-yellow-500"></span>
+          <p className="text-gray-500 text-sm font-medium">Our Team</p>
         </div>
 
         {/* Heading */}
         <h2 className="text-4xl font-bold mb-12">
-          What <span className="text-brand">Our Clients Say</span>
+          The <span className="text-brand">People Behind Our Work</span>
         </h2>
 
         {/* Slider */}
-        <div className="relative overflow-hidden sm:px-10 px-5">
+        <div className="relative overflow-hidden sm:px-10 px-5 pb-1">
           <motion.div
             className="flex"
             animate={{ x: `-${index * 100}%` }}
@@ -114,14 +114,14 @@ export default function Testimonials() {
 
                     {/* Profile */}
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="bg-brand p-3 rounded-r-full absolute top-0 left-0">
+                      {/* <div className="bg-brand p-3 rounded-r-full absolute top-0 left-0">
                         <img
                           src={item.image}
                           className="w-20 h-20 rounded-full border-4 border-white object-cover"
                         />
-                      </div>
+                      </div> */}
 
-                      <div className="relative md:left-25 left-20 -top-3">
+                      <div className="relative -top-3">
                         <h4 className="font-semibold text-lg">{item.name}</h4>
                         <p className="text-gray-500 text-sm">{item.role}</p>
 

@@ -127,7 +127,7 @@ const HomePage = () => {
         </div>
 
         <OurProducts />
-        <FlashSale />
+        {/* <FlashSale /> */}
         <Testimonials />
         <NewsBlogs />
         <InstagramSection />
