@@ -1,6 +1,3 @@
-import { FiHeart, FiShoppingBag } from "react-icons/fi";
-import { FiMaximize } from "react-icons/fi";
-import { FaStar } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import type { ProductCardType } from "../../types";
@@ -12,33 +9,9 @@ const backdropVariants = {
   visible: { opacity: 1 },
 };
 
-const modalVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.95,
-    y: 40,
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 25,
-    },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.95,
-    y: 20,
-    transition: {
-      duration: 0.2,
-    },
-  },
-};
-
-export default function ProductCard2({ name, category, price, discount, discounted_price, rating, url }: ProductCardType) {
+export default function ProductCard2({ name, category, 
+  // price, discount, discounted_price, rating, 
+  url }: ProductCardType) {
 
   const [isOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState({

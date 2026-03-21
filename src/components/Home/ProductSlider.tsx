@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 import ProductCard from "../ProductCard";
-import { categories, megaCategories } from "../../data/categories";
+import { megaCategories } from "../../data/categories";
 
 const ProductSlider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);

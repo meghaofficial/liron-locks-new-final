@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import { RxCross1 } from "react-icons/rx";
 import Navbar from "./shared/Navbar";
 import Footer from "./shared/Footer";
 
@@ -9,9 +6,6 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-
-  const [openUpperBar, setOpenUpperBar] = useState(true);
-
   return (
     <div className='google-sans'>
       {/* {openUpperBar && (
