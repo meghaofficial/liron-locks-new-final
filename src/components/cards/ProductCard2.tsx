@@ -1,15 +1,10 @@
 import { FiExternalLink } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
 import type { ProductCardType } from "../../types";
 import { useEffect, useState } from "react";
+import Popup from "../shared/Popup";
 import { InputField } from "../shared/InputField";
 
-const backdropVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-};
-
-export default function ProductCard2({ name, category, 
+export default function ProductCard2({ name, category,
   // price, discount, discounted_price, rating, 
   url }: ProductCardType) {
 
@@ -26,38 +21,36 @@ export default function ProductCard2({ name, category,
     const phoneNumber = "919927772017"; // include country code
 
     const message = `
-      New Inquiry For
+      New Inquiry For - ${url}
 
       Product: ${name}
       Category: ${category}
-      Image: ${url}
-      Phone: ${'phone'}
-      Email: ${'email'}
-      Message: ${'messageInput'}
+
+      Client Details :-
+
+      From: ${form.name}
+      Address: ${form.address}
+      Phone: ${form.phone}
+      Email: ${form.email}
+      Message: ${form.message}
     `;
-
     const encodedMessage = encodeURIComponent(message);
-
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     window.open(whatsappURL, "_blank");
-
   }
-
-  useEffect(() => {
-    handleSend()
-  }, [form]);
 
   // FOR INQUIRY FORM
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    e.preventDefault();
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
+    handleSend();
   };
 
   return (
@@ -134,93 +127,66 @@ export default function ProductCard2({ name, category,
 
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="fixed inset-0 z-50 flex justify-center bg-black/40 backdrop-blur-sm"
-            variants={backdropVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            onClick={() => setIsOpen(false)}
+      <Popup isOpen={isOpen} setIsOpen={setIsOpen} type="Inquiry Form">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-2xl space-y-5 overflow-y-auto"
+        >
+          <div className="flex items-center justify-center flex-col">
+            <img src={url} alt="lock-url" className="w-30 mb-6" />
+            <span className="text-[10px]">Inquiry for above product</span>
+          </div>
+          <InputField
+            label="Full Name"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+          />
+          <InputField
+            label="Full Address"
+            name="address"
+            value={form.address}
+            onChange={handleChange}
+          />
+          <div className="grid md:grid-cols-2 gap-4">
+            <InputField
+              label="Email"
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+            />
+            <InputField
+              label="Alternate Phone"
+              name="phone"
+              type="tel"
+              value={form.phone}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="relative">
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              required
+              rows={4}
+              className="peer w-full px-4 pt-5 pb-2 bg-transparent border border-gray-300 rounded-xl outline-none focus:border-[#123458]"
+            />
+            <label className="absolute left-4 top-2 text-sm text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm">
+              Message
+            </label>
+          </div>
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className="w-full py-3 rounded-xl bg-[#123458] text-white font-medium hover:opacity-90 transition"
           >
-            <motion.div
-              className="bg-white rounded-2xl shadow-xl p-6 w-[90%] max-w-md overflow-y-hidden"
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <form
-                onSubmit={handleSubmit}
-                className="w-full max-w-2xl space-y-5 overflow-y-auto h-100"
-              >
-                <h2 className="text-2xl font-semibold text-[#123458]">
-                  Contact Details
-                </h2>
-
-                {/* Name */}
-                <InputField
-                  label="Full Name"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                />
-
-                {/* Address */}
-                <InputField
-                  label="Full Address"
-                  name="address"
-                  value={form.address}
-                  onChange={handleChange}
-                />
-
-                {/* Email + Phone Grid */}
-                <div className="grid md:grid-cols-2 gap-4">
-                  <InputField
-                    label="Email"
-                    name="email"
-                    type="email"
-                    value={form.email}
-                    onChange={handleChange}
-                  />
-
-                  <InputField
-                    label="Alternate Phone"
-                    name="phone"
-                    type="tel"
-                    value={form.phone}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                {/* Message */}
-                <div className="relative">
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    className="peer w-full px-4 pt-5 pb-2 bg-transparent border border-gray-300 rounded-xl outline-none focus:border-[#123458]"
-                  />
-                  <label className="absolute left-4 top-2 text-sm text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm">
-                    Message
-                  </label>
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-xl bg-[#123458] text-white font-medium hover:opacity-90 transition"
-                >
-                  Submit Inquiry
-                </button>
-              </form>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            Submit Inquiry
+          </button>
+        </form>
+      </Popup>
 
     </div>
   );
