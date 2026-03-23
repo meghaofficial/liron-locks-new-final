@@ -17,6 +17,8 @@ export default function ProductCard2({ name, category,
     message: "",
   });
 
+  const [loading, setLoading] = useState(true);
+
   const handleSend = () => {
     const phoneNumber = "919927772017"; // include country code
 
@@ -53,6 +55,10 @@ export default function ProductCard2({ name, category,
     handleSend();
   };
 
+  // useEffect(() => {
+  //   setLoading(true);
+  // }, [url]);
+
   return (
     <div className="w-65 rounded-3xl p-4">
 
@@ -80,11 +86,21 @@ export default function ProductCard2({ name, category,
         </div> */}
 
         {/* Product Image */}
-        <img
-          src={url}
-          alt="chair"
-          className="h-50 object-contain"
-        />
+        <div className="relative h-50 flex items-center justify-center">
+          {/* Skeleton */}
+          {loading && (
+            <p className="relative left-1/3">Loading...</p>
+          )}
+
+          {/* Image */}
+          <img
+            src={url}
+            alt="chair"
+            className={`h-50 object-contain transition-opacity duration-300 ${loading ? "opacity-0" : "opacity-100"
+              }`}
+            onLoad={() => setLoading(false)}
+          />
+        </div>
 
       </div>
 

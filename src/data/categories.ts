@@ -58,32 +58,32 @@ export const allFewProducts: Record<string, Product[]> = {
   ],
   ["Rose Handles"]: [
     {
-      name: "RH-1",
+      name: "RSH-1",
       category: "Rose Handle",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428169/Picsart_26-03-02_10-32-37-914_lqq56d.png",
     },
     {
-      name: "RH-2",
+      name: "RSH-2",
       category: "Rose Handle",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428149/Picsart_26-03-02_10-28-53-726_s5ltd6.png",
     },
     {
-      name: "RH-3",
+      name: "RSH-3",
       category: "Rose Handle",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png",
     },
     {
-      name: "RH-4",
+      name: "RSH-4",
       category: "Rose Handle",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-42-431_k0zw9w.png",
     },
     {
-      name: "RH-5",
+      name: "RSH-5",
       category: "Rose Handle",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-24-08-639_rvbufz.png",
     },
     {
-      name: "RH-6",
+      name: "RSH-6",
       category: "Rose Handle",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428144/Picsart_26-03-02_10-24-50-988_e90aul.png",
     },

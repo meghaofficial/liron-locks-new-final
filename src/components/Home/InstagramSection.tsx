@@ -3,8 +3,8 @@ import { FaInstagram } from "react-icons/fa";
 const posts = [
   {
     type: "image",
-    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6",
-    link: "https://instagram.com",
+    src: "https://www.instagram.com/reel/DTudVI-D68l/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/p/DTudVI-D68l",
   },
   {
     type: "image",

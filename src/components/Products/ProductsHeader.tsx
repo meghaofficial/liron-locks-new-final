@@ -24,11 +24,11 @@ export default function ProductsHeader() {
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         <h1 className="text-4xl font-bold text-gray-900 mb-3">
-          Shop
+          Products
         </h1>
 
         <div className="text-gray-600 text-sm flex justify-center items-center gap-2">
-          <span className="hover:text-green-700 cursor-pointer">Home</span>
+          <span className="hover:text-green-700 cursor-pointer">All</span>
           <span>/</span>
           <span className="text-gray-900 font-medium">Shop</span>
         </div>

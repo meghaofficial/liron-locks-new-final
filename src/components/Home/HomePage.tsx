@@ -1,16 +1,15 @@
 import ProductSlider from './ProductSlider';
 import OurProducts from './OurProducts';
-import FlashSale from './FlashSale';
 import Testimonials from './Testimonials';
-import NewsBlogs from './NewsBlogs';
 import InstagramSection from './InstagramSection';
-import FAQSection from './FAQSection';
 import NewsletterSection from './NewsletterSection';
 import Layout from '../Layout';
 import FreeShipping from '../shared/FreeShipping';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -35,16 +34,16 @@ const HomePage = () => {
               Reliable protection and durability you can count on every day.
             </p>
             <div className="flex md:flex-row flex-col items-center gap-6">
-              <button className="flex items-center gap-2 bg-brand text-white px-6 py-3 rounded-full font-medium shadow-md">
-                Shop Now
+              <button className="flex items-center cursor-pointer gap-2 bg-brand text-white px-6 py-3 rounded-full font-medium shadow-md" onClick={() => navigate("/products")}>
+                View All Products
                 <span>→</span>
               </button>
-              <Link
+              {/* <Link
                 to="/products"
                 className="underline underline-offset-4 text-gray-800 font-medium"
               >
                 View All Products
-              </Link>
+              </Link> */}
             </div>
 
           </div>
@@ -129,9 +128,9 @@ const HomePage = () => {
         <OurProducts />
         {/* <FlashSale /> */}
         <Testimonials />
-        <NewsBlogs />
-        <InstagramSection />
-        <FAQSection />
+        {/* <NewsBlogs /> */}
+        {/* <InstagramSection /> */}
+        {/* <FAQSection /> */}
         <NewsletterSection />
       </Layout>
     </>

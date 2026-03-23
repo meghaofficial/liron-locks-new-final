@@ -17,8 +17,8 @@ export default function Footer() {
           <Logo imgH={12} textSize={20} color="white" />
 
           <p className="text-gray-300 text-[12px] leading-relaxed mb-6 mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Liron Locks delivers durable and reliable locking solutions built on experience.
+            Focused on quality and strength, our products are trusted to perform and last.
           </p>
 
           {/* Social Icons */}
@@ -74,11 +74,10 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">Contact Info</h3>
           <ul className="space-y-3 text-gray-300 text-sm">
-            <li>+0123-456-789</li>
-            <li>example@gmail.com</li>
+            <li>+91-9358252692</li>
+            <li>wardhanofficials@gmail.com</li>
             <li>
-              8502 Preston Rd. <br />
-              Inglewood, Maine 98380
+              89A1 Begum Bagh<br/> Aligarh, Uttar Pradesh 202001
             </li>
           </ul>
         </div>
@@ -87,16 +86,8 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-yellow-400 text-black">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm">
-
-          <p>Copyright © 2024 Furniture. All Rights Reserved.</p>
-
-          <div className="flex items-center gap-4 mt-2 md:mt-0">
-            <span className="cursor-pointer">English ▼</span>
-            <span>|</span>
-            <span className="cursor-pointer">USD ▼</span>
-          </div>
-
+        <div className="max-w-7xl mx-auto px-5 py-3 flex flex-col md:flex-row justify-between items-center text-sm">
+          <p>© 2026 Liron Locks. All Rights Reserved.</p>
         </div>
       </div>
 
