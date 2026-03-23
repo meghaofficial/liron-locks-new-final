@@ -1,4 +1,19 @@
+import { useNavigate } from "react-router-dom";
+
+const navItems: Record<string, string> = {
+  'Cylinders': 'cylinders',
+  'Deadlock': 'dead_lock',
+  'Iron Handles': 'iron_handles',
+  'Mortise Locks': 'mortise_lock',
+  'Rose Handles': 'rose_handles',
+  'Stainless Steel Handles': 'ss_handles',
+  'SS Zinc Plate Handles': 'ss_plate_zinc'
+};
+
 export default function ProductsHeader() {
+
+  const navigate = useNavigate();
+
   return (
     <section className="relative bg-gray-100 py-14 overflow-hidden">
 
@@ -27,10 +42,15 @@ export default function ProductsHeader() {
           Products
         </h1>
 
-        <div className="text-gray-600 text-sm flex justify-center items-center gap-2">
-          <span className="hover:text-green-700 cursor-pointer">All</span>
-          <span>/</span>
-          <span className="text-gray-900 font-medium">Shop</span>
+        <div className="text-gray-600 text-sm flex flex-wrap justify-center items-center gap-2">
+          {/* <span className={`cursor-pointer ${location.pathname.includes('all') && 'font-semibold mt-0.5'}`} onClick={() => navigate(`/products/all`)}>All</span>
+          <span>|</span> */}
+          {Object.keys(navItems).map((key, index) => (
+            <>
+              <span className={`font-medium cursor-pointer ${location.pathname.includes(navItems[key]) && 'font-semibold mt-0.5'}`} key={index} onClick={() => navigate(`/products/${navItems[key]}`)}>{key}</span>
+              {index < Object.values(navItems).length - 1 && <span>|</span>}
+            </>
+          ))}
         </div>
 
       </div>

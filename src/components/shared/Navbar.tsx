@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useParams } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { RiSearch2Line, RiHeart3Line, RiShoppingCartLine, RiUser3Line } from "react-icons/ri";
 import lion from '../../assets/images/lion.png';
@@ -9,6 +9,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [openNav, setOpenNav] = useState(false);
   const [activeTab, setActiveTab] = useState("");
+  const { category } = useParams();
 
   useEffect(() => {
     const path = location.pathname;
@@ -16,7 +17,7 @@ const Navbar = () => {
       setActiveTab('Home');
       return;
     }
-    if (path === '/products'){
+    if (path === `/products/${category}`){
       setActiveTab('Shop');
       return;
     }
