@@ -15,7 +15,7 @@ const backdropVariants = {
 
 const Popup = ({ isOpen, setIsOpen, type, children }: PopupType) => {
   return (
-    <div className="p-2">
+    <div className="">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -27,7 +27,7 @@ const Popup = ({ isOpen, setIsOpen, type, children }: PopupType) => {
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              className="bg-white h-fit rounded-lg shadow-xl p-6 w-[90%] max-w-md"
+              className="bg-white rounded-lg shadow-xl p-6 w-[90%] max-w-md"
               initial="hidden"
               animate="visible"
               exit="exit"
