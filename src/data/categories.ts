@@ -27,64 +27,64 @@ export const allFewProducts: Record<string, Product[]> = {
   ["Iron Handles"]: [
     {
       name: "IRH-1",
-      category: "Iron Handle",
+      category: "Iron Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390393/Picsart_26-03-01_23-07-11-494_o4ainm.png",
     },
     {
       name: "IRH-2",
-      category: "Iron Handle",
+      category: "Iron Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390390/Picsart_26-03-01_22-59-37-109_wsugpx.png",
     },
     {
       name: "IRH-3",
-      category: "Iron Handle",
+      category: "Iron Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390390/Picsart_26-03-01_23-06-37-446_ejc92x.png",
     },
     {
       name: "IRH-4",
-      category: "Iron Handle",
+      category: "Iron Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390389/Picsart_26-03-01_23-05-55-927_plvxvx.png",
     },
     {
       name: "IRH-5",
-      category: "Iron Handle",
+      category: "Iron Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390389/Picsart_26-03-01_23-09-35-810_jnhily.png",
     },
     {
       name: "IRH-6",
-      category: "Iron Handle",
+      category: "Iron Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772390389/Picsart_26-03-01_23-07-59-011_qg0tv0.png",
     },
   ],
   ["Rose Handles"]: [
     {
       name: "RSH-1",
-      category: "Rose Handle",
+      category: "Rose Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428169/Picsart_26-03-02_10-32-37-914_lqq56d.png",
     },
     {
       name: "RSH-2",
-      category: "Rose Handle",
+      category: "Rose Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428149/Picsart_26-03-02_10-28-53-726_s5ltd6.png",
     },
     {
       name: "RSH-3",
-      category: "Rose Handle",
+      category: "Rose Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-02-963_cyqe8a.png",
     },
     {
       name: "RSH-4",
-      category: "Rose Handle",
+      category: "Rose Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-23-42-431_k0zw9w.png",
     },
     {
       name: "RSH-5",
-      category: "Rose Handle",
+      category: "Rose Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428146/Picsart_26-03-02_10-24-08-639_rvbufz.png",
     },
     {
       name: "RSH-6",
-      category: "Rose Handle",
+      category: "Rose Handles",
       url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772428144/Picsart_26-03-02_10-24-50-988_e90aul.png",
     },
   ],

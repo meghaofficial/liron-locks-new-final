@@ -1,8 +1,19 @@
 import { FiExternalLink } from "react-icons/fi";
 import type { ProductCardType } from "../../types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Popup from "../shared/Popup";
 import { InputField } from "../shared/InputField";
+import { useNavigate } from "react-router-dom";
+
+const navItems: Record<string, string> = {
+  'Cylinders': 'cylinders',
+  'Dead & Latch Locks': 'dead_lock',
+  'Iron Handles': 'iron_handles',
+  'Mortise Locks': 'mortise_lock',
+  'Rose Handles': 'rose_handles',
+  'SS Handle': 'ss_handles',
+  'SS Zinc Plate Handles': 'ss_plate_zinc'
+};
 
 export default function ProductCard2({ name, category,
   // price, discount, discounted_price, rating, 
@@ -18,6 +29,7 @@ export default function ProductCard2({ name, category,
   });
 
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   const handleSend = () => {
     const phoneNumber = "919927772017"; // include country code
@@ -55,15 +67,13 @@ export default function ProductCard2({ name, category,
     handleSend();
   };
 
-  // useEffect(() => {
-  //   setLoading(true);
-  // }, [url]);
-
   return (
     <div className="w-65 rounded-3xl p-4">
 
       {/* Image Section */}
-      <div className="relative bg-gray-200 rounded-2xl p-6 flex justify-center">
+      <div className="relative bg-gray-200 rounded-2xl p-6 flex justify-center" 
+      // onClick={() => category &&  navigate(`/${navItems[category]}/${name}`)}
+      >
 
         {/* Discount Badge */}
         {/* {discount && (

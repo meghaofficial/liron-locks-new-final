@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const navItems: Record<string, string> = {
   'Iron Handles': 'iron_handles',
   'Rose Handles': 'rose_handles',
-  'Stainless Steel Handles': 'ss_handles',
+  'SS Handle': 'ss_handles',
 };
 
 const OurProducts = () => {

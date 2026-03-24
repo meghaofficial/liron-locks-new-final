@@ -433,92 +433,92 @@ export const rose_handles: Product[] = [
 export const ss_handles: Product[] = [
   {
     name: "SSH-1",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303273/Picsart_26-02-28_23-45-30-428_lh1x1l.png",
   },
   {
     name: "SSH-2",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303273/Picsart_26-02-28_23-47-11-320_g3r2ov.png",
   },
   {
     name: "SSH-3",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303272/Picsart_26-02-28_23-44-49-151_zsugse.png",
   },
   {
     name: "SSH-4",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303272/Picsart_26-02-28_23-51-27-611_zsmou5.png",
   },
   {
     name: "SSH-5",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303272/Picsart_26-02-28_23-40-46-509_ykcsn8.png",
   },
   {
     name: "SSH-6",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303271/Picsart_26-02-28_23-42-00-774_j5dmx3.png",
   },
   {
     name: "SSH-7",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303271/Picsart_26-02-28_23-43-33-258_te1ehq.png",
   },
   {
     name: "SSH-8",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303269/Picsart_26-02-28_23-48-28-661_npvdkm.png",
   },
   {
     name: "SSH-9",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303269/Picsart_26-02-28_23-47-49-213_yarmvz.png",
   },
   {
     name: "SSH-10",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303269/Picsart_26-02-28_23-46-34-650_ro9qc0.png",
   },
   {
     name: "SSH-11",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303268/Picsart_26-02-28_23-49-49-998_lo5uxl.png",
   },
   {
     name: "SSH-12",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303267/Picsart_26-02-28_23-49-16-947_hx7hxw.png",
   },
   {
     name: "SSH-13",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303265/Picsart_26-02-28_23-52-10-010_jyv0mn.png",
   },
   {
     name: "SSH-14",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303265/Picsart_26-02-28_23-50-43-513_ghdjth.png",
   },
   {
     name: "SSH-15",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303265/Picsart_26-02-28_23-52-56-501_bumcdg.png",
   },
   {
     name: "SSH-16",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303264/Picsart_26-02-28_23-53-36-756_xlyo7g.png",
   },
   {
     name: "SSH-17",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303264/Picsart_26-02-28_23-55-06-194_qkfb0z.png",
   },
   {
     name: "SSH-18",
-    category: "Stainless Steel Handles",
+    category: "SS Handle",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772303263/Picsart_26-02-28_23-54-25-543_uhout7.png",
   }
 ];

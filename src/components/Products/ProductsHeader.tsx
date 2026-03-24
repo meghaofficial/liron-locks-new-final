@@ -6,7 +6,7 @@ const navItems: Record<string, string> = {
   'Iron Handles': 'iron_handles',
   'Mortise Locks': 'mortise_lock',
   'Rose Handles': 'rose_handles',
-  'Stainless Steel Handles': 'ss_handles',
+  'SS Handle': 'ss_handles',
   'SS Zinc Plate Handles': 'ss_plate_zinc'
 };
 
