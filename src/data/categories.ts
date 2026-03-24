@@ -17,7 +17,7 @@ export const megaCategories = [
     items: 2,
   },
   {
-    name: "Dead Locks",
+    name: "Dead & Latch Locks",
     img: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540844/Picsart_26-03-03_17-57-05-864_ll4084.png",
     items: 5,
   },

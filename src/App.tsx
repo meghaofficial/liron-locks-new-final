@@ -8,7 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/products' element={<Navigate to="/products/all" replace />} />
+        <Route path='/products' element={<Navigate to="/products/iron_handles" replace />} />
         <Route path='/products/:category' element={<ProductsPage />} />
       </Routes>
     </>

@@ -4,6 +4,12 @@ import { allFewProducts } from "../../data/categories";
 import { FiExternalLink } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
+const navItems: Record<string, string> = {
+  'Iron Handles': 'iron_handles',
+  'Rose Handles': 'rose_handles',
+  'Stainless Steel Handles': 'ss_handles',
+};
+
 const OurProducts = () => {
 
   const [upperList, setUpperList] = useState<string[]>([]);
@@ -60,7 +66,7 @@ const OurProducts = () => {
               />
             </div>
           ))}
-          <button className="flex items-center gap-2 px-6 py-3 cursor-pointer bg-gray-300 rounded-full font-medium hover:bg-gray-400 transition me-4">
+          <button className="flex items-center gap-2 px-6 py-3 cursor-pointer bg-gray-300 rounded-full font-medium hover:bg-gray-400 transition me-4"  onClick={() => navigate(`/products/${navItems[activeTab]}`)}>
             <p className="text-nowrap text-[10px] tracking-wider uppercase font-semibold">View All</p>
             <span className="text-lg">→</span>
           </button>

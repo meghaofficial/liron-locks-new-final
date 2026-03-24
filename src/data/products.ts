@@ -16,27 +16,27 @@ export const cylinders: Product[] = [
 export const dead_lock: Product[] = [
   {
     name: "DL-1",
-    category: "Deadlock",
+    category: "Dead & Latch Locks",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540844/Picsart_26-03-03_17-57-05-864_ll4084.png",
   },
   {
     name: "DL-2",
-    category: "Deadlock",
+    category: "Dead & Latch Locks",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540842/Picsart_26-03-03_16-09-33-198_akyrjb.png",
   },
   {
     name: "DL-3",
-    category: "Deadlock",
+    category: "Dead & Latch Locks",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540842/Picsart_26-03-03_11-42-09-077_azkhvf.png",
   },
   {
     name: "DL-4",
-    category: "Deadlock",
+    category: "Dead & Latch Locks",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540841/Picsart_26-03-03_11-39-20-386_o8kxcq.png",
   },
   {
     name: "DL-5",
-    category: "Deadlock",
+    category: "Dead & Latch Locks",
     url: "https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540840/Picsart_26-03-03_11-38-46-972_sf9cgp.png",
   },
 ];

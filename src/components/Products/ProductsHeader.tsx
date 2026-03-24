@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const navItems: Record<string, string> = {
   'Cylinders': 'cylinders',
-  'Deadlock': 'dead_lock',
+  'Dead & Latch Locks': 'dead_lock',
   'Iron Handles': 'iron_handles',
   'Mortise Locks': 'mortise_lock',
   'Rose Handles': 'rose_handles',

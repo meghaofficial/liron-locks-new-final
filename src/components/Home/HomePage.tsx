@@ -1,7 +1,6 @@
 import ProductSlider from './ProductSlider';
 import OurProducts from './OurProducts';
 import Testimonials from './Testimonials';
-import InstagramSection from './InstagramSection';
 import NewsletterSection from './NewsletterSection';
 import Layout from '../Layout';
 import FreeShipping from '../shared/FreeShipping';
@@ -38,12 +37,6 @@ const HomePage = () => {
                 View All Products
                 <span>→</span>
               </button>
-              {/* <Link
-                to="/products"
-                className="underline underline-offset-4 text-gray-800 font-medium"
-              >
-                View All Products
-              </Link> */}
             </div>
 
           </div>
@@ -65,16 +58,17 @@ const HomePage = () => {
                     Handles
                   </h2>
                   <ul className="text-gray-700 text-sm space-y-2">
-                    <li>Iron Handles</li>
-                    <li>Rose Handles</li>
-                    <li>SS Handles</li>
-                    <li>Zinc Handle SS Plate</li>
+                    <li onClick={() => navigate('/products/iron_handles')}>Iron Handles</li>
+                    <li onClick={() => navigate('/products/rose_handles')}>Rose Handles</li>
+                    <li onClick={() => navigate('/products/ss_handles')}>SS Handles</li>
+                    <li onClick={() => navigate('/products/ss_plate_zinc')}>Zinc Handle SS Plate</li>
                   </ul>
                 </div>
               </div>
               <img
                 src="https://res.cloudinary.com/dlmdsldqn/image/upload/v1772262807/Picsart_26-02-27_23-29-15-732_q4ji5b.png"
                 className="h-105 object-contain"
+                onClick={() => navigate('/products/iron_handles')}
               />
             </div>
 
@@ -89,16 +83,11 @@ const HomePage = () => {
                   <h2 className="text-3xl font-bold text-gray-800">
                     Mortice Lock
                   </h2>
-                  {/* <ul className="text-gray-700 text-sm space-y-1">
-                    <li>Reception Sofa</li>
-                    <li>Sectional Sofa</li>
-                    <li>Armless Sofa</li>
-                    <li>Curved Sofa</li>
-                  </ul> */}
                 </div>
                 <img
                   src="https://res.cloudinary.com/dlmdsldqn/image/upload/v1772554685/Picsart_26-03-03_11-36-01-738_jr5g7e.png"
                   className="h-50 object-contain"
+                  onClick={() => navigate('/products/mortise_lock')}
                 />
               </div>
               {/* bottom */}
@@ -108,16 +97,17 @@ const HomePage = () => {
                     4+ Items
                   </p>
                   <h2 className="text-3xl font-bold text-gray-800">
-                    Deadlock
+                    Dead & Latch Locks
                   </h2>
                   <ul className="text-gray-700 text-sm space-y-1">
-                    <li>Drawer Locks</li>
-                    <li>Door Locks</li>
+                    <li onClick={() => navigate('/products/dead_lock')}>Drawer Locks</li>
+                    <li onClick={() => navigate('/products/dead_lock')}>Door Locks</li>
                   </ul>
                 </div>
                 <img
                   src="https://res.cloudinary.com/dlmdsldqn/image/upload/v1772540842/Picsart_26-03-03_11-42-09-077_azkhvf.png"
                   className="h-50 object-contain"
+                  onClick={() => navigate('/products/dead_lock')}
                 />
               </div>
             </div>

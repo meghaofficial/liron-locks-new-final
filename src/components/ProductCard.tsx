@@ -1,4 +1,5 @@
 import { HiArrowUpRight } from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
 
 type ProductCardProps = {
   image?: string;
@@ -6,11 +7,20 @@ type ProductCardProps = {
   items?: number;
 };
 
+const navItems: Record<string, string> = {
+  'Cylinders': 'cylinders',
+  'Dead & Latch Locks': 'dead_lock',
+  'Handles': 'iron_handles',
+  'Mortise Locks': 'mortise_lock',
+};
+
 const ProductCard: React.FC<ProductCardProps> = ({
   image,
   title,
   items,
 }) => {
+
+  const navigate = useNavigate();
 
   return (
     <div className="md:w-[320px] w-55 bg-gray-100 md:rounded-3xl rounded-xl p-2 shadow-md relative">
@@ -38,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
 
         {/* Arrow Button */}
-        <button className="md:w-12 md:h-12 h-8 min-w-8 rounded-full bg-brand cursor-pointer flex items-center justify-center text-white text-xl hover:scale-105 transition">
+        <button className="md:w-12 md:h-12 h-8 min-w-8 rounded-full bg-brand cursor-pointer flex items-center justify-center text-white text-xl hover:scale-105 transition" onClick={() => title && navigate(`/products/${navItems?.[title]}`)}>
           <HiArrowUpRight />
         </button>
 
