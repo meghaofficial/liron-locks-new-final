@@ -37,7 +37,7 @@ const Popup = ({ isOpen, setIsOpen, type, children }: PopupType) => {
                 <span className="text-2xl font-semibold text-brand">{type}</span>
                 <RxCross2 className="cursor-pointer" onClick={() => setIsOpen(false)} />
               </div>
-              <div className="md:max-h-100 max-h-75 overflow-y-auto">
+              <div className="md:max-h-100 max-h-85 overflow-y-auto">
                 {children}
               </div>
             </motion.div>
